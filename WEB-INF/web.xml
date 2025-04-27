@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+    version="3.1">
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>servlet.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RechercheVentesServlet</servlet-name>
+        <servlet-class>servlet.RechercheVentesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RechercheVentesServlet</servlet-name>
+        <url-pattern>/RechercheVentes</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RechercheMedicamentServlet</servlet-name>
+        <servlet-class>servlet.RechercheMedicamentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RechercheMedicamentServlet</servlet-name>
+        <url-pattern>/RechercheMedicaments</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RechercheProduitsConseills</servlet-name>
+        <servlet-class>servlet.RechercheProduitsConseills</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RechercheProduitsConseills</servlet-name>
+        <url-pattern>/RechercheProduitsConseills</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RechercheVentesClientServlet</servlet-name>
+        <servlet-class>servlet.RechercheVentesClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RechercheVentesClientServlet</servlet-name>
+        <url-pattern>/rechercheVentesClient</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RechercheVentesCommisionServlet</servlet-name>
+        <servlet-class>servlet.RechercheVentesCommisionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RechercheVentesCommisionServlet</servlet-name>
+        <url-pattern>/rechercheVentesCommision</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StockServlet</servlet-name>
+        <servlet-class>servlet.StockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StockServlet</servlet-name>
+        <url-pattern>/etatStock</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>MouvementStockServlet</servlet-name>
+            <servlet-class>servlet.MouvementStockServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MouvementStockServlet</servlet-name>
+        <url-pattern>/mouvementStock</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InsertionVentesServlet</servlet-name>
+        <servlet-class>servlet.InsertionVentesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertionVentesServlet</servlet-name>
+        <url-pattern>/insertionVentes</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>InsertionProduitsServlet</servlet-name>
+        <servlet-class>servlet.InsertionProduitsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertionProduitsServlet</servlet-name>
+        <url-pattern>/insertionProduits</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InsertionProduitsConseillsServlet</servlet-name>
+        <servlet-class>servlet.InsertionProduitsConseillsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertionProduitsConseillsServlet</servlet-name>
+        <url-pattern>/insertProduitConseilles</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InsertionClientServlet</servlet-name>
+        <servlet-class>servlet.InsertionClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertionClientServlet</servlet-name>
+        <url-pattern>/insertClients</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InsertionAchatsServlet</servlet-name>
+        <servlet-class>servlet.InsertionAchatsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertionAchatsServlet</servlet-name>
+        <url-pattern>/insertAchats</url-pattern>
+    </servlet-mapping>
+</web-app>

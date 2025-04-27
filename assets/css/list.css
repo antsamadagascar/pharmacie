@@ -1,0 +1,295 @@
+/* Styles généraux */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6b839a;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; 
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #517192;
+    color: #fff;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    cursor: pointer; /* Indique que l'en-tête est cliquable pour le tri */
+    position: relative; /* Nécessaire pour positionner les icônes de tri */
+    padding-right: 25px; /* Espace pour les icônes de tri */
+}
+
+/* Icône de tri par défaut */
+.table th.sorting::after {
+    content: '\25B2'; /* Icône de flèche pour le tri */
+    position: absolute;
+    right: 10px;
+    color: #ddd; /* Couleur plus claire pour l'icône de tri inactif */
+}
+
+/* Icône de tri ascendant */
+.table th.sorting_asc::after {
+    content: '\25B2'; /* Icône de flèche vers le haut */
+    color: #fff; /* Couleur de l'icône active */
+}
+
+/* Icône de tri descendant */
+.table th.sorting_desc::after {
+    content: '\25BC'; /* Icône de flèche vers le bas */
+    color: #fff; /* Couleur de l'icône active */
+}
+.table td {
+    font-size: 0.875rem;
+    color: #343a40;
+}
+.table td a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.action-links a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.875rem;
+}
+
+.action-links a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.modal-header {
+    background-color: #5d55b1;
+    color: #fff;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Personnalisation des éléments de DataTables */
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+}
+
+.dataTables_wrapper .dataTables_filter label {
+    font-weight: normal;
+    font-size: 0.875rem;
+    color: #495057;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    margin-left: 0.5rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 0.875rem;
+}
+
+.dataTables_wrapper .dataTables_length {
+    float: left;
+    font-size: 0.875rem;
+    color: #495057;
+}
+
+.dataTables_wrapper .dataTables_length label {
+    font-weight: normal;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    margin-left: 0.5rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 0.875rem;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+}
+/*
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    margin-left: 2px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff !important;
+    border: 1px solid transparent;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+*/
+.dataTables_wrapper .dataTables_info {
+    padding-top: 0.85em;
+    font-size: 0.875rem;
+    color: #495057;
+}
+
+/* Responsive Design pour les tablettes */
+@media (max-width: 992px) {
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.8rem;
+    }
+
+    .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_length {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive Design pour les petits écrans */
+@media (max-width: 768px) {
+    table thead {
+        display: none;
+    }
+
+    table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    table tbody tr td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border: none;
+    }
+
+    table tbody tr td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #6c757d;
+    }
+
+    table tbody tr td:last-child {
+        border-bottom: none;
+    }
+
+    .table-container {
+        padding: 10px;
+    }
+
+    .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_length {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+/* Responsive Design pour les mobiles */
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .table-container {
+        padding: 5px;
+    }
+
+    .table tbody tr td {
+        padding-left: 40%;
+    }
+
+    .table tbody tr td::before {
+        width: 60%;
+    }
+
+    .action-links a {
+        margin: 0 5px;
+        text-decoration: none;
+        color: #007bff;
+        font-size: 0.875rem;
+    }
+    
+
+    .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_length {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
