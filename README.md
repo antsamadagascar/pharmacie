@@ -1,45 +1,66 @@
-# Pharmacie - Guide d'installation et de déploiement
+# Pharmacie - Installation & Deployment Guide
 
-## Prérequis
+## Prerequisites
 
-Avant d'utiliser ce projet, assurez-vous d'avoir installé :
+Before using this project, make sure you have the following installed:
 
-- **JDK 19.0.2**
-- **XAMPP v3.3.0** (incluant Tomcat)
+- **JDK 17 or later** (recommended: JDK 19.0.2)
+- **XAMPP v3.3.0** (with Tomcat included)
 - **PostgreSQL 15**
 
-## Base de données
+## Database Setup
 
-Exécutez les scripts SQL situés dans le dossier `sql` dans l'ordre suivant :
+Execute the SQL scripts located in the `sql` folder in the following order:
 
-1. `table`
-2. `data`
-3. `view`
-4. `function`
+1. `table.sql`
+2. `data.sql`
+3. `view.sql`
+4. `function.sql`
 
 ## Installation
 
-Clonez le projet depuis le dépôt GitHub :
+Clone the project from GitHub:
 
 ```bash
 git clone https://github.com/antsamadagascar/Pharmacie.git
+```
 
-Déploiement
+## Deployment
 
-   1.  Ouvrez le fichier build.bat.
+1. Open the file `build.bat`.
 
-   2.  Modifiez les chemins suivants selon votre installation de Tomcat :
-   set "root=C:\xampp\tomcat\webapps\pharmacies"
-   set "target_dir=C:\xampp\tomcat\webapps\pharmacies\lib"
-   set "config_target_dir=C:\xampp\tomcat\webapps\pharmacies\web\WEB-INF\classes\config"
+2. Update the following paths according to your Tomcat installation:
 
+```bat
+set "root=C:\xampp\tomcat\webapps\pharmacies"
+set "target_dir=%root%\lib"
+set "config_target_dir=%root%\web\WEB-INF\classes\config"
+```
 
-   set "root=C:\xampp\tomcat\webapps\pharmacies"
-   set "target_dir=C:\xampp\tomcat\webapps\pharmacies\lib"
-   set "config_target_dir=C:\xampp\tomcat\webapps\pharmacies\web\WEB-INF\classes\config"
+3. Make sure your environment is using **Java 17 or newer**. You can verify by running:
 
+```bash
+java -version
+```
 
-   3. Positionnez-vous dans le dossier contenant build.bat.
+4. Navigate to the folder containing `build.bat`.
 
-   4. Exécutez dans un terminal ou PowerShell :
-   build.bat
+5. Run the script in a terminal or PowerShell:
+
+```bash
+build.bat
+```
+
+The script will:
+
+- Compile all `.java` source files with `--release 17` for compatibility with Java 17 environments.
+- Create a `.jar` file.
+- Copy the compiled files and configuration to the appropriate Tomcat directories.
+- Launch the browser automatically at: [http://localhost:8080/pharmacies/](http://localhost:8080/pharmacies/)
+
+> ⚠️ If you are using a different Java version (e.g., Java 11), edit the following line in `build.bat`:
+>
+> ```bat
+> javac --release 17 -d "%bin%" -cp "%lib%\*" *.java
+> ```
+> Replace `--release 17` with your version (e.g., `--release 11`) as needed.
