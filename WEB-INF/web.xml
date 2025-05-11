@@ -118,4 +118,12 @@
         <servlet-name>InsertionAchatsServlet</servlet-name>
         <url-pattern>/insertAchats</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>InsertionHistoriquePrixServlet</servlet-name>
+        <servlet-class>servlet.InsertionHistoriquePrixServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertionHistoriquePrixServlet</servlet-name>
+        <url-pattern>/insertionHistoriquePrix</url-pattern>
+    </servlet-mapping>
 </web-app>

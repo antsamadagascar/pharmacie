@@ -15,8 +15,8 @@
             </a>
             <ul id="crud-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="insertionVentes">
-                        <i class="bi bi-circle"></i><span>Ventes</span>
+                    <a href="insertionProduits">
+                        <i class="bi bi-circle"></i><span>Produits</span>
                     </a>
                 </li>
                 <li>
@@ -25,10 +25,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="insertionProduits">
-                        <i class="bi bi-circle"></i><span>Produits</span>
+                    <a href="insertionVentes">
+                        <i class="bi bi-circle"></i><span>Ventes</span>
                     </a>
                 </li>
+
                 <li>
                     <a href="insertProduitConseilles">
                         <i class="bi bi-circle"></i><span>Produits Conseilles</span>
