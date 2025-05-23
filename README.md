@@ -120,7 +120,7 @@ Le script va :
 
 ## 🎯 **Fonctionnalités Détaillées**
 
-Pour une description complète des fonctionnalités, consultez : [**📋 Fonctionnalités Détaillées**](FEATURES.md)
+Pour une description complète des fonctionnalités, consultez : [**📋 Fonctionnalités Détaillées**](features.md)
 
 ## 🏗️ **Architecture Technique**
 
