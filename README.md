@@ -53,6 +53,9 @@ Exécutez les scripts SQL situés dans le dossier `sql` dans l'ordre suivant :
 3. `view.sql`
 4. `function.sql`
 
+Fonction de réinitialisation des donnees:
+`delete.sql` – Script de réinitialisation : supprime toutes les données des principales tables (ventes, médicaments, types, etc.) en désactivant temporairement les contraintes de clés étrangères.
+
 ### **Installation**
 Clonez le projet depuis GitHub :
 ```bash
@@ -64,8 +67,6 @@ git clone https://github.com/antsamadagascar/Pharmacie.git
 2. Mettez à jour les chemins selon votre installation Tomcat :
 ```bat
 set "root=C:\xampp\tomcat\webapps\pharmacies"
-set "target_dir=%root%\lib"
-set "config_target_dir=%root%\web\WEB-INF\classes\config"
 ```
 
 3. Vérifiez votre version Java :
@@ -145,14 +146,24 @@ Pour une description complète des fonctionnalités, consultez : [**📋 Fonctio
 ✅ **Recherche avancée** sur tous les critères  
 
 ## 🔧 **Support & Maintenance**
-
-- **Logs détaillés** pour le débogage
 - **Structure modulaire** pour faciliter les évolutions
 - **Code documenté** et maintenable
 - **Base de données optimisée** avec vues,function et index
 
+## 🛠️ **Technologies Utilisées**
+
+Ce projet utilise des technologies de base éprouvées et fiables :
+
+- **☕ Java** - Langage principal pour la logique métier
+- **🔧 VSCode** - Environnement de développement
+- **⚡ AJAX** - Requêtes asynchrones pour l'interactivité
+- **📄 JSP** - Pages dynamiques côté serveur
+- **🗃️ DAO** - Pattern d'accès aux données
+- **🐘 PostgreSQL** - Base de données relationnelle
+- **🎨 Bootstrap** - Framework CSS pour l'interface utilisateur
+
 ## 📞 **Contact & Support**
 
-Pour toute question ou support technique, n'hésitez pas à créer une issue sur le repository GitHub.
+Pour toute question ou collaboration , n'hésitez pas à créer une issue sur le repository GitHub.
 
 ---
